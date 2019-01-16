@@ -52,12 +52,13 @@ table {
 * {
     box-sizing: border-box;
 }
-
 html, body {
 	height: 100%;
 	.default_font();
 	size: @default-size;
 }
+//import font
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 // flex-direction
 @flex-row: row;
 
@@ -68,12 +69,14 @@ html, body {
 @default-color: rgb(255, 255, 255);
 @banner-color: rgb(233, 236, 239);
 @team_up_color: rgb(128, 128, 128);
+@table_data_color: rgb(242, 242, 242);
 
 // font-family
 .default_font(){
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
    	font-weight: 300;
 }
+@roboto: Roboto;
 // flex-box
 .flex-row(){
 	display: flex;
@@ -85,7 +88,8 @@ html, body {
 }
 // font-size
 @default-size: 62.5%;
-
+// border
+@border-grey: 1px solid lightgrey;
 
 
 // my code
@@ -129,13 +133,14 @@ body{
 			width: 70%;
 			padding: 0% 3%;
 			h1{
+				font-family: @roboto;
 				font-size: 3rem;
 				font-weight: 100;
 			}
 			h2{
 				padding: 1% 0% 5% 0%;
 				font-size: 1rem;
-				border-bottom: 0.25px grey solid;
+				border-bottom: @border-grey;
 			}
 		}
 		.projects_sign_up{
@@ -160,6 +165,7 @@ body{
 		padding: 2% 0%;
 		width: 80%;
 		.flex-row();
+		justify-content: space-between;
 		.left_side{
 			width: 40%;
 			line-height: 1.5;
@@ -182,11 +188,47 @@ body{
 			.right_side_list{
 				width: 70%;
 				p{
-					border: .1px solid lightgray;
+					border: @border-grey;
 					width: 100%;
 					padding: 2%;
 				}
 			}
 		}
+	}
+	.work_history_section{
+		width: 80%;
+		h3 {
+			font-size: 1.5rem;
+			padding-bottom: 1%;
+		}
+		table{
+			width: 100%;
+			thead{
+				td {
+					font-weight: 600;
+				}
+			}
+			tbody{
+				.coloured{
+					background: @table_data_color;
+				}
+			}
+			tr{
+				td {
+					padding: 2% 1%;
+					border-top: @border-grey;
+					border-left: @border-grey;
+				}
+			}
+		}
+	}
+	footer {
+		background: @footer-color;
+		margin-top: 5%;
+		width: 80%;
+		.flex-row();
+		justify-content: center;
+		padding: 4% 0%;
+		color: white;
 	}
 }

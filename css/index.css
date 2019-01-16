@@ -137,6 +137,12 @@ body {
   font-weight: 300;
   size: 62.5%;
 }
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
 body {
   color: black;
 }
@@ -182,13 +188,14 @@ body {
   padding: 0% 3%;
 }
 .main_container .main_banner .main_banner_title h1 {
+  font-family: Roboto;
   font-size: 3rem;
   font-weight: 100;
 }
 .main_container .main_banner .main_banner_title h2 {
   padding: 1% 0% 5% 0%;
   font-size: 1rem;
-  border-bottom: 0.25px grey solid;
+  border-bottom: 1px solid lightgrey;
 }
 .main_container .main_banner .projects_sign_up {
   width: 70%;
@@ -212,6 +219,7 @@ body {
   width: 80%;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .main_container .skills_and_about_me .left_side {
   width: 40%;
@@ -238,7 +246,38 @@ body {
   width: 70%;
 }
 .main_container .skills_and_about_me .right_side .right_side_list p {
-  border: 0.1px solid lightgray;
+  border: 1px solid lightgrey;
   width: 100%;
   padding: 2%;
+}
+.main_container .work_history_section {
+  width: 80%;
+}
+.main_container .work_history_section h3 {
+  font-size: 1.5rem;
+  padding-bottom: 1%;
+}
+.main_container .work_history_section table {
+  width: 100%;
+}
+.main_container .work_history_section table thead td {
+  font-weight: 600;
+}
+.main_container .work_history_section table tbody .coloured {
+  background: #f2f2f2;
+}
+.main_container .work_history_section table tr td {
+  padding: 2% 1%;
+  border-top: 1px solid lightgrey;
+  border-left: 1px solid lightgrey;
+}
+.main_container footer {
+  background: #808080;
+  margin-top: 5%;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 4% 0%;
+  color: white;
 }
