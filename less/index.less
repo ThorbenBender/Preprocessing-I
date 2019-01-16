@@ -97,7 +97,6 @@ body{
 	.flex-column();
 	margin: 0 auto;
 	align-items: center;
-	height: 100%;
 	header {
 		.flex-row();
 		width: 80%;
@@ -158,11 +157,36 @@ body{
 		}
 	}
 	.skills_and_about_me{
+		padding: 2% 0%;
 		width: 80%;
 		.flex-row();
 		.left_side{
-			width: 50%;
+			width: 40%;
+			line-height: 1.5;
+			h2 {
+				font-size: 1.5rem;
+				font-weight: 500;
+			}
 		}
-		.right_side
+		.right_side{
+			width: 60%;
+			line-height: 1.5;
+			.flex-column();
+			align-items: center;
+			.right_side_title{
+				justify-self: flex-start;
+				h3{
+					font-size: 1.25rem;
+				}
+			}
+			.right_side_list{
+				width: 70%;
+				p{
+					border: .1px solid lightgray;
+					width: 100%;
+					padding: 2%;
+				}
+			}
+		}
 	}
 }

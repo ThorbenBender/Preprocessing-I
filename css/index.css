@@ -146,7 +146,6 @@ body {
   flex-direction: column;
   margin: 0 auto;
   align-items: center;
-  height: 100%;
 }
 .main_container header {
   display: flex;
@@ -209,10 +208,37 @@ body {
   font-weight: 600;
 }
 .main_container .skills_and_about_me {
+  padding: 2% 0%;
   width: 80%;
   display: flex;
   flex-direction: row;
 }
 .main_container .skills_and_about_me .left_side {
-  width: 50%;
+  width: 40%;
+  line-height: 1.5;
+}
+.main_container .skills_and_about_me .left_side h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.main_container .skills_and_about_me .right_side {
+  width: 60%;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main_container .skills_and_about_me .right_side .right_side_title {
+  justify-self: flex-start;
+}
+.main_container .skills_and_about_me .right_side .right_side_title h3 {
+  font-size: 1.25rem;
+}
+.main_container .skills_and_about_me .right_side .right_side_list {
+  width: 70%;
+}
+.main_container .skills_and_about_me .right_side .right_side_list p {
+  border: 0.1px solid lightgray;
+  width: 100%;
+  padding: 2%;
 }
