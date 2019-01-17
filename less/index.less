@@ -111,10 +111,16 @@ body{
 		justify-content: flex-end;
 		margin-top: 2%;
 		margin-bottom: 1%;
+		@media (max-width: 500px){
+			justify-content: center;
+		}
 		nav {
-			width: 100%;
+			width: 40%;
 			.flex-row();
 			justify-content: space-between;
+			@media (max-width: 500px) {
+				width: 100%;
+			}
 			a{
 				text-decoration: none;
 				color: @text-color;
@@ -230,10 +236,11 @@ body{
 				}
 			}
 			tr{
+				border-top: @border-grey;
+				border-left: @border-grey;
+				border-right: @border-grey;
 				td {
 					padding: 2% 1%;
-					border-top: @border-grey;
-					border-left: @border-grey;
 				}
 			}
 		}
