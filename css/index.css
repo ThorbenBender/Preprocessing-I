@@ -153,6 +153,11 @@ body {
   margin: 0 auto;
   align-items: center;
 }
+@media (max-width: 500px) {
+  .main_container {
+    width: 100%;
+  }
+}
 .main_container header {
   display: flex;
   flex-direction: row;
@@ -162,7 +167,7 @@ body {
   margin-bottom: 1%;
 }
 .main_container header nav {
-  width: 40%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -182,6 +187,11 @@ body {
 .main_container .main_banner .main_banner_image_section img {
   width: 20%;
   height: 10%;
+}
+@media (max-width: 500px) {
+  .main_container .main_banner .main_banner_image_section img {
+    display: none;
+  }
 }
 .main_container .main_banner .main_banner_title {
   width: 70%;
@@ -221,9 +231,20 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .main_container .skills_and_about_me {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .main_container .skills_and_about_me .left_side {
   width: 40%;
   line-height: 1.5;
+}
+@media (max-width: 500px) {
+  .main_container .skills_and_about_me .left_side {
+    width: 100%;
+  }
 }
 .main_container .skills_and_about_me .left_side h2 {
   font-size: 1.5rem;
@@ -235,6 +256,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (max-width: 500px) {
+  .main_container .skills_and_about_me .right_side {
+    width: 100%;
+  }
 }
 .main_container .skills_and_about_me .right_side .right_side_title {
   justify-self: flex-start;
@@ -271,6 +297,48 @@ body {
   border-top: 1px solid lightgrey;
   border-left: 1px solid lightgrey;
 }
+.main_container .form {
+  margin-top: 5%;
+  width: 80%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  align-items: center;
+  background: #36393E;
+}
+.main_container .form .colour_input {
+  height: 10%;
+  padding: 2% 0%;
+  width: 50%;
+  margin: auto;
+}
+.main_container .form .colour_input input {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2% 0%;
+  background: #36393E;
+  border: none;
+  border-bottom: white 1px solid;
+  color: white;
+}
+.main_container .form .colour_input input::placeholder {
+  color: white;
+}
+.main_container .form .form_submit {
+  padding: 4% 0%;
+  width: 20%;
+}
+.main_container .form .form_submit button {
+  padding: 5% 2%;
+  width: 100%;
+  color: white;
+  background: grey;
+  border: none;
+  cursor: pointer;
+}
 .main_container footer {
   background: #808080;
   margin-top: 5%;
@@ -278,6 +346,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 4% 0%;
+  padding: 2% 0% 3% 0%;
   color: white;
 }
